@@ -2,26 +2,26 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: events-external
-  name: events-external
+    app: external
+  name: external
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: events-external
+      app: external
   strategy: {}
   template:
     metadata:
       labels:
-        app: events-external
+        app: external
     spec:
       containers:
-      - image: gcr.io/mar-roidtc307/devoops_external:latest
-        name: events-external
+      - image: gcr.io/twitterfeedstokafkatest/devoops_external:v1.0
+        name: external
         imagePullPolicy: "Always"
         env:
         - name: SERVER
-          value: "http://events-internal"
+          value: "http://internal"
         resources:
           requests:
             memory: "128Mi"
