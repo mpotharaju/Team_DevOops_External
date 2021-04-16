@@ -22,7 +22,7 @@ spec:
         imagePullPolicy: "Always"
         env:
         - name: SERVER
-          value: "http://internal"
+          value: "http://internal:8082"
         resources:
           requests:
             memory: "128Mi"
