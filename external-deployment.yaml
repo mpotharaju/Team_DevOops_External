@@ -4,6 +4,7 @@ metadata:
   labels:
     app: external
   name: external
+  namespace: demoapp
 spec:
   replicas: 2
   selector:
