@@ -17,7 +17,7 @@ spec:
         app: external
     spec:
       containers:
-      - image: gcr.io/twitterfeedstokafkatest/devoops_external:v1.0
+      - image: gcr.io/twitterfeedstokafkatest/devoops_external:v1.1
         name: external
         imagePullPolicy: "Always"
         env:
